@@ -8,38 +8,41 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgb(14, 25, 45);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 50px 50px;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 .section {
-  width: 90%;
-  height: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: 4fr 3fr;
   border: 2px solid rgb(228, 66, 160);
-  border-radius: 5px;
+  border-radius: 0.5rem;
   padding: 5%;
 }
 
 .left {
-  width: 100%;
+  width: 50rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .left p {
+  width: 100%;
   line-height: 1.4;
+  font-size: 1.5rem;
 }
 .left .live {
   background-color: rgb(111, 72, 207);
-  width: 300px;
-  font-size: 30px;
+  width: 30rem;
+  font-size: 3rem;
   font-weight: 600;
-  padding: 15px 0;
+  padding: 1.5rem 0;
   text-align: center;
 }
 .left .header {
@@ -47,7 +50,7 @@ body {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1px;
-  padding: 30px 0;
+  padding: 3rem 0;
   font-size: 45px;
 }
 .left .registracija {
@@ -67,7 +70,6 @@ body {
 }
 
 .right {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -75,20 +77,20 @@ body {
   text-align: center;
 }
 .right .datum {
-  font-size: 30px;
+  font-size: 3rem;
   color: rgb(228, 66, 160);
   font-weight: 800;
   letter-spacing: 2px;
 }
 .right .profiles .profile_1 .name, .right .profiles .profile_2 .name {
   color: gold;
-  font-size: 20px;
+  font-size: 2rem;
   letter-spacing: 1px;
 }
 .right .profiles .profile_1 .role, .right .profiles .profile_2 .role {
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 2px;
-  line-height: 20px;
+  line-height: 2rem;
 }
 
 img {
@@ -104,4 +106,23 @@ img {
 
 #mc_embed_signup form {
   margin: 0 0;
+}
+
+#mc_embed_signup .mc-field-group {
+  padding-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+  .section {
+    text-align: center;
+    background-color: aqua;
+    width: 599px;
+    grid-template-columns: 1fr;
+    grid-row: 1fr 1fr;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }/*# sourceMappingURL=index.css.map */
