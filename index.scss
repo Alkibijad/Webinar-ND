@@ -7,135 +7,167 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(14, 25, 45);
+    background-color: rgb(19, 39, 77);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 50px 50px;
- 
+
+
 }
-html{
+
+html {
     font-size: 62.5%;
 }
 
 .section {
-    width: 100%;
+
+    margin: 0 auto;
+    width: 900px;
     display: grid;
     grid-template-columns: 4fr 3fr;
-    border: 2px solid rgb(228,66,160);
+    border: 2px solid rgb(228, 66, 160);
     border-radius: .5rem;
-    padding: 5%;
+
 }
 
 .left {
-    width: 50rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    p{
-        width: 100%;
-        line-height: 1.4;
-        font-size: 1.5rem;
-    }
 
-    .live{
-        background-color: rgb(111,72,207);
+    .live {
+        background-color: rgb(111, 72, 207);
         width: 30rem;
         font-size: 3rem;
         font-weight: 600;
         padding: 1.5rem 0;
         text-align: center;
     }
-    .header{
+
+    .header {
         color: gold;
         text-transform: uppercase;
         font-weight: 800;
         letter-spacing: 1px;
         padding: 3rem 0;
         font-size: 45px;
-       
+
+
+
 
     }
-    .registracija{
+
+    p {
+
+        line-height: 1.4;
+        font-size: 1.5rem;
+
+        width: 100%;
+
+        padding: 30px 20px;
+
+    }
+
+    .registracija {
         padding: 20px 0;
-        h2{
+
+        h2 {
             color: gold;
         }
-        .button{
+
+        .button {
             background-color: gold !important;
-            color: purple !important; 
+            color: purple !important;
             font-weight: 600 !important;
             letter-spacing: 1px;
         }
-        .mc-field-group input{
+
+        .mc-field-group input {
             width: 50% !important;
         }
-       
-       
-     
+
+
+
     }
 }
 
-.right { 
+.right {
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    .datum{
+
+    .datum {
         font-size: 3rem;
-        color: rgb(228,66,160);
+        color: rgb(228, 66, 160);
         font-weight: 800;
-        letter-spacing: 2px;     
+        letter-spacing: 2px;
     }
-    .profiles{
-        .profile_1, .profile_2{
-           .name{
-            color: gold;
-            font-size: 2rem;
-            letter-spacing: 1px;
-           }
-           .role{
-            font-size: 1rem;
-            letter-spacing: 2px;
-            line-height: 2rem;
-           }
+
+    .profiles {
+
+        .profile_1,
+        .profile_2 {
+            .name {
+                color: gold;
+                font-size: 2rem;
+                letter-spacing: 1px;
+            }
+
+            .role {
+                font-size: 1rem;
+                letter-spacing: 2px;
+                line-height: 2rem;
+            }
         }
     }
 
-    
+
 }
 
-img{
+img {
     width: 150px;
     border-radius: 50%;
     margin: 20px;
 }
 
-.zoom{
+.zoom {
     color: rgb(119, 164, 255);
     font-weight: 800;
 }
 
-#mc_embed_signup form{
+#mc_embed_signup form {
     margin: 0 0;
 }
 
-#mc_embed_signup .mc-field-group{
-    padding-bottom: 0!important;
+#mc_embed_signup .mc-field-group {
+    padding-bottom: 0 !important;
 }
 
 @media only screen and (max-width: 600px) {
-    body{
+    body {
         padding: 0;
     }
-  .section{
-    text-align: center;
 
-    width: 599px;
-    grid-template-columns: 1fr;
-    grid-row: 1fr 1fr;
-    height: fit-content;
-    
-  }
-  }
+    .section {
+        text-align: center;
+
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-row: 1fr 1fr;
+        height: fit-content;
+
+    }
+
+    #mc_embed_signup form {
+        text-align: center;
+    }
+
+    .left .registracija .mc-field-group input {
+        margin: 10px auto;
+
+    }
+
+}

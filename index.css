@@ -7,10 +7,9 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(14, 25, 45);
+  background-color: rgb(19, 39, 77);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 50px 50px;
 }
 
 html {
@@ -18,24 +17,19 @@ html {
 }
 
 .section {
-  width: 100%;
+  margin: 0 auto;
+  width: 900px;
   display: grid;
   grid-template-columns: 4fr 3fr;
   border: 2px solid rgb(228, 66, 160);
   border-radius: 0.5rem;
-  padding: 5%;
 }
 
 .left {
-  width: 50rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.left p {
-  width: 100%;
-  line-height: 1.4;
-  font-size: 1.5rem;
 }
 .left .live {
   background-color: rgb(111, 72, 207);
@@ -52,6 +46,12 @@ html {
   letter-spacing: 1px;
   padding: 3rem 0;
   font-size: 45px;
+}
+.left p {
+  line-height: 1.4;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 30px 20px;
 }
 .left .registracija {
   padding: 20px 0;
@@ -82,12 +82,14 @@ html {
   font-weight: 800;
   letter-spacing: 2px;
 }
-.right .profiles .profile_1 .name, .right .profiles .profile_2 .name {
+.right .profiles .profile_1 .name,
+.right .profiles .profile_2 .name {
   color: gold;
   font-size: 2rem;
   letter-spacing: 1px;
 }
-.right .profiles .profile_1 .role, .right .profiles .profile_2 .role {
+.right .profiles .profile_1 .role,
+.right .profiles .profile_2 .role {
   font-size: 1rem;
   letter-spacing: 2px;
   line-height: 2rem;
@@ -118,10 +120,16 @@ img {
   }
   .section {
     text-align: center;
-    width: 599px;
+    width: 100%;
     grid-template-columns: 1fr;
     grid-row: 1fr 1fr;
     height: -moz-fit-content;
     height: fit-content;
+  }
+  #mc_embed_signup form {
+    text-align: center;
+  }
+  .left .registracija .mc-field-group input {
+    margin: 10px auto;
   }
 }/*# sourceMappingURL=index.css.map */
