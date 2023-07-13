@@ -2,172 +2,214 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(19, 39, 77);
+  }
+  
+  body {
+    background-color: rgb(14, 25, 45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-
-
-}
-
-html {
-    font-size: 62.5%;
-}
-
-.section {
-
-    margin: 0 auto;
-    width: 900px;
+  
+    img {
+      width: 150px;
+      border-radius: 50%;
+    }
+  }
+  
+  .section {
+    max-width: 800px;
+    border: 2px solid rgb(228, 66, 160);
+    border-radius: 5px;
+    padding: 2rem;
     display: grid;
     grid-template-columns: 4fr 3fr;
-    border: 2px solid rgb(228, 66, 160);
-    border-radius: .5rem;
-
-}
-
-.left {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .live {
+    min-height: 90vh;
+    font-family: Arial, Helvetica, sans-serif;
+  
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      .radio-box {
         background-color: rgb(111, 72, 207);
-        width: 30rem;
-        font-size: 3rem;
+        width: 40%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-weight: 600;
-        padding: 1.5rem 0;
-        text-align: center;
-    }
-
-    .header {
-        color: gold;
+        font-size: 2rem;
         text-transform: uppercase;
-        font-weight: 800;
-        letter-spacing: 1px;
-        padding: 3rem 0;
-        font-size: 45px;
-
-
-
-
-    }
-
-    p {
-
-        line-height: 1.4;
-        font-size: 1.5rem;
-
-        width: 100%;
-
-        padding: 30px 20px;
-
-    }
-
-    .registracija {
-        padding: 20px 0;
-
-        h2 {
-            color: gold;
+      }
+  
+      .header {
+        h1 {
+          text-transform: uppercase;
+          color: gold;
+          font-size: 2.5rem;
+          font-weight: 800;
         }
-
-        .button {
-            background-color: gold !important;
-            color: purple !important;
-            font-weight: 600 !important;
+      }
+      .text-content {
+          letter-spacing: 1px;
+        }
+      
+        .form {
+         
+     
+          h2 {
+            font-weight: 600;
             letter-spacing: 1px;
+            color: gold;
+          }
+          
+      
+          input {
+            display: block;
+            width: 200px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            margin: 15px 0;
+          }
+      
+           #mc-embedded-subscribe {
+            background-color: gold;
+            color: purple;
+            width: 10rem;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+          }
+          #mce-success-response{
+              color: white
+              
+          }
+          #mce-success-response{
+              margin: 10px 0;
+          }
         }
-
-        .mc-field-group input {
-            width: 50% !important;
-        }
-
-
-
     }
-}
-
-.right {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-
-    .datum {
-        font-size: 3rem;
+  
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+  
+      .time-and-date {
         color: rgb(228, 66, 160);
+        font-size: 2.5rem;
         font-weight: 800;
-        letter-spacing: 2px;
-    }
-
-    .profiles {
-
-        .profile_1,
-        .profile_2 {
+        height: 20%;
+      }
+      .profiles{
+          height: 80%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+  
+          .profile {
             .name {
-                color: gold;
-                font-size: 2rem;
-                letter-spacing: 1px;
+              color: gold;
+              font-size: 1.7rem;
+              line-height: 2;
             }
-
+      
             .role {
-                font-size: 1rem;
-                letter-spacing: 2px;
-                line-height: 2rem;
+              letter-spacing: 1px;
+              font-size: 1rem;
             }
-        }
+          }
+      }
+  
     }
-
-
-}
-
-img {
-    width: 150px;
-    border-radius: 50%;
-    margin: 20px;
-}
-
-.zoom {
-    color: rgb(119, 164, 255);
-    font-weight: 800;
-}
-
-#mc_embed_signup form {
-    margin: 0 0;
-}
-
-#mc_embed_signup .mc-field-group {
-    padding-bottom: 0 !important;
-}
-
-@media only screen and (max-width: 600px) {
-    body {
-        padding: 0;
-    }
-
+  
+   
+  }
+  
+  @media only screen and (max-width: 800px) {
+  
+  
     .section {
-        text-align: center;
-
-        width: 100%;
-        grid-template-columns: 1fr;
-        grid-row: 1fr 1fr;
-        height: fit-content;
-
+      grid-template-columns: 1fr;
+      text-align: center;
+  
+      .left {
+        min-height: 70vh;
+  
+        .form {
+          input {
+            margin: 15px auto;
+          }
+        }
+      }
+      .right{
+          margin-top: 30px;
+          height: 60vh;
+          .profiles{
+              flex-direction: row;
+          }
+       
+      }
     }
-
-    #mc_embed_signup form {
-        text-align: center;
+  }
+  
+  @media only screen and (max-width: 400px) {
+  
+  
+  
+    .section {
+      margin: 0;
+      padding: 0;
+   
+      .right{
+          .profiles{
+            
+           
+  
+             flex-direction: column;
+          }
+          img{
+              margin-top: 10px;
+          }
+      }
     }
-
-    .left .registracija .mc-field-group input {
-        margin: 10px auto;
-
+  }
+  @media only screen and (max-width: 400px) {
+    body {
+      // background-color: lightblue;
     }
-
-}
+  
+    .section {
+      img{
+          width: 100px;
+      }
+      .left {
+          height: 80vh;
+        .header {
+          h1 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .right{
+          .profiles{
+              .profile{
+                  .name{
+                      font-size: 1rem;
+                  }
+                  .role{
+                      font-size: .8rem;
+                  }
+                
+              }
+          }
+      }
+    }
+  }
+  
