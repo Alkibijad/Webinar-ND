@@ -5,131 +5,154 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(19, 39, 77);
+  background-color: rgb(14, 25, 45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-html {
-  font-size: 62.5%;
+body img {
+  width: 150px;
+  border-radius: 50%;
 }
 
 .section {
-  margin: 0 auto;
-  width: 900px;
+  max-width: 800px;
+  border: 2px solid rgb(228, 66, 160);
+  border-radius: 5px;
+  padding: 2rem;
   display: grid;
   grid-template-columns: 4fr 3fr;
-  border: 2px solid rgb(228, 66, 160);
-  border-radius: 0.5rem;
+  min-height: 90vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-.left {
-  width: 100%;
+.section .left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.left .live {
+.section .left .radio-box {
   background-color: rgb(111, 72, 207);
-  width: 30rem;
-  font-size: 3rem;
+  width: 40%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
-  padding: 1.5rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.section .left .header h1 {
+  text-transform: uppercase;
+  color: gold;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.section .left .text-content {
+  letter-spacing: 1px;
+}
+.section .left .form h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: gold;
+}
+.section .left .form input {
+  display: block;
+  width: 200px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+.section .left .form #mc-embedded-subscribe {
+  background-color: gold;
+  color: purple;
+  width: 10rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+.section .left .form #mce-success-response {
+  color: white;
+}
+.section .left .form #mce-success-response {
+  margin: 10px 0;
+}
+.section .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
 }
-.left .header {
-  color: gold;
-  text-transform: uppercase;
+.section .right .time-and-date {
+  color: rgb(228, 66, 160);
+  font-size: 2.5rem;
   font-weight: 800;
-  letter-spacing: 1px;
-  padding: 3rem 0;
-  font-size: 45px;
+  height: 20%;
 }
-.left p {
-  line-height: 1.4;
-  font-size: 1.5rem;
-  width: 100%;
-  padding: 30px 20px;
-}
-.left .registracija {
-  padding: 20px 0;
-}
-.left .registracija h2 {
-  color: gold;
-}
-.left .registracija .button {
-  background-color: gold !important;
-  color: purple !important;
-  font-weight: 600 !important;
-  letter-spacing: 1px;
-}
-.left .registracija .mc-field-group input {
-  width: 50% !important;
-}
-
-.right {
+.section .right .profiles {
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
 }
-.right .datum {
-  font-size: 3rem;
-  color: rgb(228, 66, 160);
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-.right .profiles .profile_1 .name,
-.right .profiles .profile_2 .name {
+.section .right .profiles .profile .name {
   color: gold;
-  font-size: 2rem;
+  font-size: 1.7rem;
+  line-height: 2;
+}
+.section .right .profiles .profile .role {
   letter-spacing: 1px;
-}
-.right .profiles .profile_1 .role,
-.right .profiles .profile_2 .role {
   font-size: 1rem;
-  letter-spacing: 2px;
-  line-height: 2rem;
 }
 
-img {
-  width: 150px;
-  border-radius: 50%;
-  margin: 20px;
+@media only screen and (max-width: 800px) {
+  .section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .section .left {
+    min-height: 70vh;
+  }
+  .section .left .form input {
+    margin: 15px auto;
+  }
+  .section .right {
+    margin-top: 30px;
+    height: 60vh;
+  }
+  .section .right .profiles {
+    flex-direction: row;
+  }
 }
-
-.zoom {
-  color: rgb(119, 164, 255);
-  font-weight: 800;
-}
-
-#mc_embed_signup form {
-  margin: 0 0;
-}
-
-#mc_embed_signup .mc-field-group {
-  padding-bottom: 0 !important;
-}
-
-@media only screen and (max-width: 600px) {
-  body {
+@media only screen and (max-width: 400px) {
+  .section {
+    margin: 0;
     padding: 0;
   }
-  .section {
-    text-align: center;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-row: 1fr 1fr;
-    height: -moz-fit-content;
-    height: fit-content;
+  .section .right .profiles {
+    flex-direction: column;
   }
-  #mc_embed_signup form {
-    text-align: center;
+  .section .right img {
+    margin-top: 10px;
   }
-  .left .registracija .mc-field-group input {
-    margin: 10px auto;
+}
+@media only screen and (max-width: 400px) {
+  .section img {
+    width: 100px;
+  }
+  .section .left {
+    height: 80vh;
+  }
+  .section .left .header h1 {
+    font-size: 1.5rem;
+  }
+  .section .right .profiles .profile .name {
+    font-size: 1rem;
+  }
+  .section .right .profiles .profile .role {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=index.css.map */
